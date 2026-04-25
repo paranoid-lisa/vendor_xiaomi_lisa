@@ -9,6 +9,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lisa/proprietary/vendor/etc/displayconfig/display_id_4630946480857061762.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946480857061762.xml \
     vendor/xiaomi/lisa/proprietary/vendor/etc/displayconfig/display_id_4630946622257352578.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946622257352578.xml \
     vendor/xiaomi/lisa/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
+    vendor/xiaomi/lisa/proprietary/system_ext/lib/libdolbyeffect.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libdolbyeffect.so \
+    vendor/xiaomi/lisa/proprietary/system_ext/lib/libdolbyottcontrol.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libdolbyottcontrol.so \
+    vendor/xiaomi/lisa/proprietary/system_ext/lib64/libdolbyeffect.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdolbyeffect.so \
+    vendor/xiaomi/lisa/proprietary/system_ext/lib64/libdolbyottcontrol.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdolbyottcontrol.so \
     vendor/xiaomi/lisa/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
     vendor/xiaomi/lisa/proprietary/vendor/bin/adpl:$(TARGET_COPY_OUT_VENDOR)/bin/adpl \
     vendor/xiaomi/lisa/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
@@ -245,7 +249,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lisa/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
     vendor/xiaomi/lisa/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
     vendor/xiaomi/lisa/proprietary/vendor/etc/init/dataqti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataqti.rc \
-    vendor/xiaomi/lisa/proprietary/vendor/etc/init/dolbycodec2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dolbycodec2.rc \
     vendor/xiaomi/lisa/proprietary/vendor/etc/init/dpmQmiMgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dpmQmiMgr.rc \
     vendor/xiaomi/lisa/proprietary/vendor/etc/init/hw/init.batterysecret.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.batterysecret.rc \
     vendor/xiaomi/lisa/proprietary/vendor/etc/init/hw/init.mi_thermald.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi_thermald.rc \
@@ -269,6 +272,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lisa/proprietary/vendor/etc/init/shsusrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/shsusrd.rc \
     vendor/xiaomi/lisa/proprietary/vendor/etc/init/ssgtzd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ssgtzd.rc \
     vendor/xiaomi/lisa/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service.rc \
     vendor/xiaomi/lisa/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
     vendor/xiaomi/lisa/proprietary/vendor/etc/init/vendor.qti.audio-adsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.audio-adsprpc-service.rc \
     vendor/xiaomi/lisa/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
@@ -301,6 +305,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lisa/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     vendor/xiaomi/lisa/proprietary/vendor/etc/media_codecs_performance_yupik_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_yupik_v1.xml \
     vendor/xiaomi/lisa/proprietary/vendor/etc/media_codecs_system_default_yupik.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_system_default_yupik.xml \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/media_codecs_with_dolby_lahaina.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_with_dolby_lahaina.xml \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/media_codecs_with_dolby_shima.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_with_dolby_shima.xml \
     vendor/xiaomi/lisa/proprietary/vendor/etc/media_codecs_with_dolby_yupik.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_with_dolby_yupik.xml \
     vendor/xiaomi/lisa/proprietary/vendor/etc/media_codecs_yupik_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_yupik_v1.xml \
     vendor/xiaomi/lisa/proprietary/vendor/etc/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
@@ -476,13 +482,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lisa/proprietary/vendor/firmware/yupik_ipa_fws.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/yupik_ipa_fws.elf \
     vendor/xiaomi/lisa/proprietary/vendor/firmware/yupik_ipa_fws.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/yupik_ipa_fws.mdt \
     vendor/xiaomi/lisa/proprietary/vendor/lib/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib/btaudio_offload_if.so \
-    vendor/xiaomi/lisa/proprietary/vendor/lib/c2.dolby.avc.dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/c2.dolby.avc.dec.so \
-    vendor/xiaomi/lisa/proprietary/vendor/lib/c2.dolby.avc.sec.dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/c2.dolby.avc.sec.dec.so \
-    vendor/xiaomi/lisa/proprietary/vendor/lib/c2.dolby.client.so:$(TARGET_COPY_OUT_VENDOR)/lib/c2.dolby.client.so \
-    vendor/xiaomi/lisa/proprietary/vendor/lib/c2.dolby.egl.so:$(TARGET_COPY_OUT_VENDOR)/lib/c2.dolby.egl.so \
-    vendor/xiaomi/lisa/proprietary/vendor/lib/c2.dolby.hevc.dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/c2.dolby.hevc.dec.so \
-    vendor/xiaomi/lisa/proprietary/vendor/lib/c2.dolby.hevc.sec.dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/c2.dolby.hevc.sec.dec.so \
-    vendor/xiaomi/lisa/proprietary/vendor/lib/c2.dolby.store.so:$(TARGET_COPY_OUT_VENDOR)/lib/c2.dolby.store.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib/hw/audio.bluetooth_qti.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.bluetooth_qti.default.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib/hw/audio.primary.lahaina.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.lahaina.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib/hw/sound_trigger.primary.lahaina.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sound_trigger.primary.lahaina.so \
@@ -526,12 +525,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lisa/proprietary/vendor/lib/libbluetooth_audio_session_qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_audio_session_qti.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib/libbluetooth_audio_session_qti_2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_audio_session_qti_2_1.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib/libcamxexternalformatutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxexternalformatutils.so \
-    vendor/xiaomi/lisa/proprietary/vendor/lib/libcodec2_hidl@1.0.stock.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_hidl@1.0.stock.so \
-    vendor/xiaomi/lisa/proprietary/vendor/lib/libcodec2_vndk.stock.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_vndk.stock.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib/libcomprcapture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcomprcapture.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib/libdiag.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdiag.so \
-    vendor/xiaomi/lisa/proprietary/vendor/lib/libdolbyottcameracontrol.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdolbyottcameracontrol.so \
-    vendor/xiaomi/lisa/proprietary/vendor/lib/libdovi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdovi.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib/libdrc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdrc.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib/libdsd2pcm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsd2pcm.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib/libdsutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsutils.so \
@@ -654,6 +649,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lisa/proprietary/vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.wifidisplaysession@1.0.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/android.hardware.secure_element@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.secure_element@1.0-impl.so \
+    vendor/xiaomi/lisa/proprietary/vendor/lib64/c2.dolby.client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/c2.dolby.client.so \
+    vendor/xiaomi/lisa/proprietary/vendor/lib64/c2.dolby.hevc.dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/c2.dolby.hevc.dec.so \
+    vendor/xiaomi/lisa/proprietary/vendor/lib64/c2.dolby.hevc.sec.dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/c2.dolby.hevc.sec.dec.so \
+    vendor/xiaomi/lisa/proprietary/vendor/lib64/c2.dolby.store.so:$(TARGET_COPY_OUT_VENDOR)/lib64/c2.dolby.store.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/camera/com.qti.actuator.lisa_ofilm_s5kgw3_dw9800_wide.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.actuator.lisa_ofilm_s5kgw3_dw9800_wide.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/camera/com.qti.actuator.lisa_semco_s5kgw3_dw9800_wide.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.actuator.lisa_semco_s5kgw3_dw9800_wide.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/camera/com.qti.eeprom.lisa_ofilm_imx355_gt24p64e_ultra_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.eeprom.lisa_ofilm_imx355_gt24p64e_ultra_eeprom.so \
@@ -939,6 +938,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/libdisplayfeatureservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisplayfeatureservice.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/libdisplayqos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisplayqos.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/libdisplayskuutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisplayskuutils.so \
+    vendor/xiaomi/lisa/proprietary/vendor/lib64/libdolbyottcameracontrol.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdolbyottcameracontrol.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/libdpmqmihal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdpmqmihal.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/libdpps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdpps.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/libdrmfs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmfs.so \
@@ -1259,5 +1259,6 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3-service-qti \
     manifest_android.hardware.drm@1.3-service.widevine \
     manifest_vendor.xiaomi.hardware.mlipay \
+    vendor.dolby.media.c2@1.0-service \
     vendor.qti.diag.hal.service \
     vendor.xiaomi.hardware.citsensorservice@1.1-service
